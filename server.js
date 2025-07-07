@@ -154,7 +154,9 @@ const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
   bot.sendMessage(chatId, `👋 Welcome ${msg.from.first_name}!  
-👉 Our new site: https://your-site.com  
+
+👉 Our new site: https://statusplus.zone.id
+
 Press the button below to get your premium code.`,
     {
       reply_markup: {
@@ -177,7 +179,7 @@ bot.on('callback_query', async (query) => {
   }
 
   if (query.data === 'creators') {
-    bot.sendMessage(chatId, `🚀 *Site marked by:* Tcroneb Hackx\n🤖 *Helped by:* Daemon Root\n💡 *Main Idea:* TV`, { parse_mode: 'Markdown' });
+    bot.sendMessage(chatId, `🚀 *created by:*  Paid Tech Zone Team\n🤖 *Review :* Daemon Root\n💡 *Special thanks to :* TV`, { parse_mode: 'Markdown' });
   }
 });
 
