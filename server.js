@@ -153,9 +153,9 @@ const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
-  bot.sendMessage(chatId, `👋 Welcome ${msg.from.first_name}!  
+  bot.sendMessage(chatId, `👋 Welcome ${msg.from.first_name}!
 
-👉 Our new site: https://statusplus.zone.id
+👉 Don't Share This : https://statusplus.zone.id
 
 Press the button below to get your premium code.`,
     {
@@ -175,11 +175,11 @@ bot.on('callback_query', async (query) => {
     const expiresAt = dayjs().add(10, 'minutes').toDate();
     const newCode = uuidv4();
     await Code.create({ code: newCode, expiresAt });
-    bot.sendMessage(chatId, `✅ Your premium code: \`${newCode}\`\nUse it within 10 minutes to download!`, { parse_mode: 'Markdown' });
+    bot.sendMessage(chatId, `✅ Your Hacked premium code: \`${newCode}\`\nUse it within 10 minutes to download!`, { parse_mode: 'Markdown' });
   }
 
   if (query.data === 'creators') {
-    bot.sendMessage(chatId, `🚀 *created by:*  Paid Tech Zone Team\n🤖 *Review :* Daemon Root\n💡 *Special thanks to :* TV`, { parse_mode: 'Markdown' });
+    bot.sendMessage(chatId, `🚀 *created by:*  Paid Tech Zone Team\n🤖 *Review :* Daemon Root\n💡 *Special thanks to :* Eksu Homes Tv`, { parse_mode: 'Markdown' });
   }
 });
 
