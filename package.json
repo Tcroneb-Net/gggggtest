@@ -1,29 +1,17 @@
 {
-  "name": "vcf-cosmic-backend",
-  "version": "1.0.0",
-  "description": "VCF Cosmic Backend API with premium code system",
-  "main": "server.js",
+  "name": "vcf-bot-api",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dayjs": "^1.11.10",
-    "dotenv": "^16.4.5",
+    "dotenv": "^16.3.1",
     "express": "^4.19.2",
-    "mongoose": "^8.3.5",
+    "mongoose": "^8.0.4",
     "multer": "^1.4.5-lts.1",
-    "uuid": "^9.0.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.3"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "keywords": [],
-  "author": "You",
-  "license": "ISC"
+    "node-telegram-bot-api": "^0.61.0",
+    "uuid": "^9.0.0"
+  }
 }
